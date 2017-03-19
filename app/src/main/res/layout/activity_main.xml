@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/col"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.udacity.stockhawk.ui.MainActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:elevation="@dimen/fab_elevation">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/logo_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/logo_margin"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_weight="1"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo2"
+
+        app:layout_scrollFlags="scroll|enterAlways"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:weightSum="1">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey"
+            android:paddingBottom="@dimen/recyclerview_bootom_padding"
+            android:clipToPadding="false"
+            />
+
+</android.support.v4.widget.SwipeRefreshLayout>
+<ImageView
+    android:contentDescription="@string/no_internet_image_desc"
+    android:layout_width="@dimen/error_img_width"
+    android:layout_height="@dimen/error_img_height"
+    android:id="@+id/errorImg"
+    android:scaleType="fitCenter"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    />
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="@dimen/default_margin"
+    android:contentDescription="@string/fav_button_desc"
+    android:onClick="button"
+    android:src="@drawable/fab_plus"
+    app:backgroundTint="@color/fab_background"
+    app:elevation="@dimen/fab_elevation"
+    app:fabSize="normal"
+    app:rippleColor="@color/white"
+    app:pressedTranslationZ="@dimen/fab_z_translation" />
+
+
+</android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name" translatable="false">Stock Hawk</string>
+
+    <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
+
+    <string name="pref_stocks_key" translatable="false">stocks</string>
+
+
+    <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
+
+    <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
+    <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
+
+    <string name="default_stocks_yahoo" translatable="false">YHOO</string>
+    <string name="default_stocks_apple" translatable="false">AAPL</string>
+    <string name="default_stocks_microsoft" translatable="false">MSFT</string>
+    <string name="default_stocks_facebook" translatable="false">FB</string>
+
+
+    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
+
+
+
+    <string name="dialog_title" translatable="true">Add Stock</string>
+    <string name="dialog_hint" translatable="true">Symbol (e.g. GOOG)</string>
+    <string name="dialog_cancel" translatable="true">Cancel</string>
+    <string name="dialog_add" translatable="true">Add</string>
+
+    <string name="error_no_network" translatable="true">No network connectivity! Will load stock cursor when the network is available.</string>
+    <string name="error_no_stocks" translatable="true">No stocks added! Hit the floating action button to add one.</string>
+    <string name="toast_no_connectivity" translatable="true">Will refresh when network available.</string>
+    <string name="stock_added" translatable="true">New stock added.</string>
+    <string name="incorrect_symbol" translatable="true">"Incorrect Symbol!"</string>
+    <string name="stock_present" translatable="true">Stock already present!</string>
+    <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
+    <string name="check_internet">Check Internet Connection!</string>
+    <string name="no_internet">No Internet Connection!</string>
+
+
+
+    <string name="avg_vol_label" translatable="true">Volume (Avg):</string>
+    <string name="widget_empty">No data available!</string>
+
+    <string name="stock_detail_tab1" translatable="false">1</string>
+    <string name="stock_detail_tab2" translatable="false">6</string>
+    <string name="stock_detail_tab3" translatable="false">12</string>
+
+    <string name="stock_detail_tab1_label" translatable="true">1 MONTH</string>
+    <string name="stock_detail_tab2_label" translatable="true">6 MONTHS</string>
+    <string name="stock_detail_tab3_label" translatable="true">1 YEAR</string>
+
+    <!--Content Description Strings-->
+    <string name="fav_button_desc" translatable="true">Add a stock</string>
+    <string name="graph_tabs_desc" translatable="true">Tabs for graph</string>
+    <string name="graph_desc" translatable="true">Stock history Chart</string>
+    <string name="details_activity_desc" translatable="true">Showing details</string>
+    <string name="graph_card_desc" translatable="true">Stock history graph</string>
+    <string name="no_internet_image_desc" translatable="true">No Connection Icon</string>
+</resources>

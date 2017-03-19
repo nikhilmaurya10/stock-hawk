@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/dialog_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_stock_dialog_margin"
+        android:layout_marginStart="@dimen/add_stock_dialog_margin"
+        android:layout_marginEnd="@dimen/add_stock_dialog_margin"
+        android:hint="@string/dialog_hint"
+        android:inputType="textCapCharacters" />
+    <ProgressBar
+        android:id="@+id/progess_circle"
+        android:layout_width="@dimen/stock_progress_spinner_size"
+        android:layout_height="@dimen/stock_progress_spinner_size"
+        android:layout_marginBottom="@dimen/add_stock_dialog_margin"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/error_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:gravity="top"
+        android:text="Error"
+        android:textSize="@dimen/stock_error_text_size"
+        android:textColor="@color/material_red_700"
+        android:visibility="gone"/>
+
+</LinearLayout>

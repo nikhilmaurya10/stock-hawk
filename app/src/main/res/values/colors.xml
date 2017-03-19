@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_red_700">#D50000</color>
+    <color name="material_green_700">#00C853</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="light_grey">#F5F5F5</color>
+
+    <color name="cardview_shadow_start_color">@color/colorAccent</color>
+    <color name="cardview_shadow_end_color">@color/white</color>
+
+    <color name="accent_light">#bbFF5722</color>
+    <color name="activated">#E0E0E0</color>
+
+    <color name="fab_background">#DDFF5722</color>
+
+</resources>
