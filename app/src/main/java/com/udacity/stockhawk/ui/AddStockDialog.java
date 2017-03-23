@@ -108,7 +108,6 @@ public class AddStockDialog extends DialogFragment {
 
             @Override
             public void onShow(final DialogInterface dialog) {
-
                 final Button button = ((AlertDialog) dialog).getButton(AlertDialog.BUTTON_POSITIVE);
                 final Button buttonC = ((AlertDialog) dialog).getButton(AlertDialog.BUTTON_NEGATIVE);
                 button.setBackgroundResource(R.drawable.touch_selector);
@@ -118,7 +117,8 @@ public class AddStockDialog extends DialogFragment {
 
                     @Override
                     public void onClick(View view) {
-                        if (PrefUtils.isStockPresent(mContext,stock.getText().toString())) {
+                        String stockString = stock.getText().toString();
+                        if (PrefUtils.isStockPresent(mContext,stockString)) {
                             button.setEnabled(false);
                             showError(getString(R.string.stock_present));
                         } else if (!PrefUtils.networkUp(mContext)) {
@@ -126,7 +126,10 @@ public class AddStockDialog extends DialogFragment {
                             showError(getString(R.string.no_internet));
                             stock.setTextColor(getResources().getColor(R.color.black));
                             button.setEnabled(true);
-                        } else new CheckStockTask().execute(stock.getText().toString());
+                        } else if (!stockString.matches("[a-zA-Z]+")) {
+                            button.setEnabled(false);
+                            showError(getString(R.string.only_letters));
+                        } else new CheckStockTask().execute(stockString);
 
 
                     }

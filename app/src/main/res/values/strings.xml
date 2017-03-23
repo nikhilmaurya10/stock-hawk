@@ -33,6 +33,7 @@
     <string name="stock_added" translatable="true">New stock added.</string>
     <string name="incorrect_symbol" translatable="true">"Incorrect Symbol!"</string>
     <string name="stock_present" translatable="true">Stock already present!</string>
+    <string name="only_letters" translatable="true">"Only letters are allowed!"</string>
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="check_internet">Check Internet Connection!</string>
     <string name="no_internet">No Internet Connection!</string>

@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/light_grey"
-            android:paddingBottom="@dimen/recyclerview_bootom_padding"
+            android:paddingBottom="64dp"
             android:clipToPadding="false"
             />
 
@@ -81,7 +81,7 @@
     android:contentDescription="@string/fav_button_desc"
     android:onClick="button"
     android:src="@drawable/fab_plus"
-    app:backgroundTint="@color/fab_background"
+    app:backgroundTint="@color/colorAccent"
     app:elevation="@dimen/fab_elevation"
     app:fabSize="normal"
     app:rippleColor="@color/white"

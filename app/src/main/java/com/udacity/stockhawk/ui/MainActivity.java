@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.errorImg)
     ImageView errImg;
-    @BindView(R.id.fab)
-    FloatingActionButton mFab;
+    //    @BindView(R.id.fab)
+//    FloatingActionButton mFab;
     private StockAdapter adapter;
     @Override
     public void onClick(Bundle bundle) {
@@ -92,16 +92,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     if (dy > 0) {
                         parallaxView.setTranslationY(Math.max(-max, parallaxView.getTranslationY() - dy / 2));
                     } else {
-                        mFab.show();
+//                        mFab.show();
                         parallaxView.setTranslationY(Math.min(0, parallaxView.getTranslationY() - dy / 2));
                     }
-                    if (dy > 0 ||dy<0 && mFab.isShown())
-                    {
-                        mFab.hide();
-                    }
-                    if (dy < 0 ) {
-                        mFab.show();
-                    }
+//                    if (dy > 0 ||dy<0 && mFab.isShown())
+//                    {
+//                        mFab.hide();
+//                    }
+//                    if (dy < 0 ) {
+//                        mFab.show();
+//                    }         //don't care about hiding it anymore.
                 }
             });
         }
@@ -134,8 +134,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         QuoteSyncJob.initialize(this);
         getSupportLoaderManager().initLoader(STOCK_LOADER, null, this);
-
-        Timber.d("..........................." + Integer.valueOf("+45").toString());
 
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
             @Override

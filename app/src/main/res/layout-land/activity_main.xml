@@ -66,7 +66,7 @@
         android:contentDescription="@string/fav_button_desc"
         android:onClick="button"
         android:src="@drawable/fab_plus"
-        app:backgroundTint="@color/fab_background"
+        app:backgroundTint="@color/colorAccent"
         app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
         app:pressedTranslationZ="@dimen/fab_z_translation"
