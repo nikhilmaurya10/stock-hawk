@@ -71,7 +71,6 @@ public class AddStockDialog extends DialogFragment {
                 .setTitle(R.string.dialog_title)
                 .setPositiveButton(R.string.dialog_add, null) //Set to null. We override the onclick
                 .setNegativeButton(R.string.dialog_cancel, null)
-//                .setNeutralButton(R.string.dialog_verify,null)
                 .create();
 
         stock.addTextChangedListener(new TextWatcher() {
@@ -200,8 +199,6 @@ public class AddStockDialog extends DialogFragment {
 
             } else {
                 //Dismiss once everything is OK.
-//                Toast.makeText(mContext,"Can't verify stock. Please enter correct name.", Toast.LENGTH_LONG).show();
-
                 showError(getString(R.string.incorrect_symbol));
 
             }

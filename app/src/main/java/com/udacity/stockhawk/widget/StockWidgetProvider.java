@@ -1,9 +1,5 @@
 package com.udacity.stockhawk.widget;
 
-/**
- * Created by nikhil on 1/3/17.
- */
-
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -18,10 +14,6 @@ import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.ui.DetailActivity;
 import com.udacity.stockhawk.ui.MainActivity;
 
-
-/**
- * Created by rnztx on 18/6/16.
- */
 public class StockWidgetProvider extends AppWidgetProvider {
     private static final String ACTION_DATA_UPDATED = "com.udacity.stockhawk.ACTION_DATA_UPDATED";
     private static final String LOG_TAG = StockWidgetProvider.class.getSimpleName();
@@ -36,6 +28,10 @@ public class StockWidgetProvider extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.stock_widget);
             views.setRemoteAdapter(R.id.widget_list_view,intent);
 
+            // Open Main Activity on clicking on Header
+            Intent mainIntent = new Intent(context, MainActivity.class);
+            PendingIntent mainPendingIntent = PendingIntent.getActivity(context, 0, mainIntent, 0);
+            views.setOnClickPendingIntent(R.id.widget_heading, mainPendingIntent);
 
             // Open Graph on List Item click
             Intent intentStockGraph = new Intent(context, DetailActivity.class);
@@ -43,7 +39,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
                     .addNextIntentWithParentStack(intentStockGraph)
                     .getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
             views.setPendingIntentTemplate(R.id.widget_list_view,pendingIntent);
-
             views.setEmptyView(R.id.widget_list_view, R.id.widget_empty);
 
             // Update Widget on HomeScreen

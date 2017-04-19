@@ -81,10 +81,8 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
 
         if (rawAbsoluteChange >= 0) {
             holder.change.setBackgroundResource(R.drawable.percent_change_pill_green);
-//            holder.listCards.setBackgroundResource(R.drawable.gradient_green);
         } else {
             holder.change.setBackgroundResource(R.drawable.percent_change_pill_red);
-//            holder.listCards.setBackgroundResource(R.drawable.gradient_red);
         }
 
         String change = dollarFormatWithPlus.format(rawAbsoluteChange);

@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private StockAdapter adapter;
     @Override
     public void onClick(Bundle bundle) {
-//        Timber.d("Symbol clicked: %s", symbol);
         Intent intent = new Intent(this,DetailActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
@@ -92,16 +91,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     if (dy > 0) {
                         parallaxView.setTranslationY(Math.max(-max, parallaxView.getTranslationY() - dy / 2));
                     } else {
-//                        mFab.show();
                         parallaxView.setTranslationY(Math.min(0, parallaxView.getTranslationY() - dy / 2));
                     }
-//                    if (dy > 0 ||dy<0 && mFab.isShown())
-//                    {
-//                        mFab.hide();
-//                    }
-//                    if (dy < 0 ) {
-//                        mFab.show();
-//                    }         //don't care about hiding it anymore.
                 }
             });
         }

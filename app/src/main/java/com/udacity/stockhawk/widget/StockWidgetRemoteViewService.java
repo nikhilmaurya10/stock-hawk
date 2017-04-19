@@ -12,7 +12,6 @@ import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
 
 public class StockWidgetRemoteViewService extends RemoteViewsService {
-    private static final String LOG_TAG = StockWidgetRemoteViewService.class.getSimpleName();
     public StockWidgetRemoteViewService() {
     }
 
@@ -84,11 +83,8 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
                 listItemRemoteView.setTextViewText(R.id.stock_name,stockName);
                 listItemRemoteView.setTextColor(R.id.stock_symbol, getResources().getColor(R.color.grey));
                 listItemRemoteView.setTextViewText(R.id.bid_price,"$" + stockPrice);
-//                listItemRemoteView.setTextColor(R.id.bid_price, getResources().getColor(R.color.black));
 
-
-
-                // if stock price is Up then background of price Change is Green else, Red
+                // if stock price is Up then color of price Change is Green else, Red
                 if (Float.valueOf(stockPercentChange)>=0) {
                     priceChangeColorId = R.color.material_green_700;
                     stockPercentChange = "+" + stockPercentChange;
