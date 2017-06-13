@@ -34,7 +34,8 @@ public class StockWidgetProvider extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.widget_heading, mainPendingIntent);
 
             // Open Graph on List Item click
-            Intent intentStockGraph = new Intent(context, DetailActivity.class);
+            //doesn't work untill API is live again
+            Intent intentStockGraph = new Intent(context, MainActivity.class);
             PendingIntent pendingIntent = TaskStackBuilder.create(context)
                     .addNextIntentWithParentStack(intentStockGraph)
                     .getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);

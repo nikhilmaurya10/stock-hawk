@@ -80,16 +80,16 @@ public final class QuoteSyncJob {
                 // WARNING! Don't request historical data for a stock that doesn't exist!
                 // The request will hang forever X_x
                 Timber.d("STARTING HISTORY FETCH.....................");
-                List<HistoricalQuote> history = stock.getHistory(from, to, Interval.WEEKLY);
-
-                StringBuilder historyBuilder = new StringBuilder();
-
-                for (HistoricalQuote it : history) {
-                    historyBuilder.append(it.getDate().getTimeInMillis());
-                    historyBuilder.append(", ");
-                    historyBuilder.append(it.getClose());
-                    historyBuilder.append("\n");
-                }
+//                List<HistoricalQuote> history = stock.getHistory(from, to, Interval.WEEKLY);
+//
+//                StringBuilder historyBuilder = new StringBuilder();
+//
+//                for (HistoricalQuote it : history) {
+//                    historyBuilder.append(it.getDate().getTimeInMillis());
+//                    historyBuilder.append(", ");
+//                    historyBuilder.append(it.getClose());
+//                    historyBuilder.append("\n");
+//                }
 
                 ContentValues quoteCV = new ContentValues();
                 quoteCV.put(Contract.Quote.COLUMN_SYMBOL, symbol);
@@ -98,7 +98,7 @@ public final class QuoteSyncJob {
                 quoteCV.put(Contract.Quote.COLUMN_PERCENTAGE_CHANGE, percentChange);
                 quoteCV.put(Contract.Quote.COLUMN_ABSOLUTE_CHANGE, change);
                 quoteCV.put(Contract.Quote.COLUMN_AVG_VOLUME, avgVol);
-                quoteCV.put(Contract.Quote.COLUMN_HISTORY, historyBuilder.toString());
+                quoteCV.put(Contract.Quote.COLUMN_HISTORY, "");//no history broken API
                 quoteCVs.add(quoteCV);
 
             }

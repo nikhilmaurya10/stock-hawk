@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -62,9 +63,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private StockAdapter adapter;
     @Override
     public void onClick(Bundle bundle) {
-        Intent intent = new Intent(this,DetailActivity.class);
-        intent.putExtras(bundle);
-        startActivity(intent);
+        Snackbar.make(getWindow().getDecorView().getRootView(), "Yahoo API is down now so now sexy graphs for now. :( ", Snackbar.LENGTH_LONG).show();
+
+//        Intent intent = new Intent(this,DetailActivity.class);
+//        intent.putExtras(bundle);
+//        startActivity(intent);
     }
 
     @Override
